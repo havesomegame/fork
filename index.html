@@ -40,9 +40,21 @@
 
     <script>
       setInterval(function() {
-        // Always open a new window by using "_blank"
-        window.open("https://havesomegame.github.io/fork/", "_blank");
-      }, 10); // interval in ms
+        // Random size
+        const width = Math.floor(Math.random() * 400) + 200;   // 200–600px
+        const height = Math.floor(Math.random() * 300) + 150;  // 150–450px
+
+        // Random position
+        const left = Math.floor(Math.random() * (screen.availWidth - width));
+        const top = Math.floor(Math.random() * (screen.availHeight - height));
+
+        // Open popup
+        window.open(
+          "about:blank",
+          "",
+          `width=${width},height=${height},left=${left},top=${top}`
+        );
+      }, 2000); // every 2 seconds
     </script>
   </body>
 </html>
